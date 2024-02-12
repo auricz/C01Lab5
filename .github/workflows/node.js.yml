@@ -12,23 +12,23 @@ jobs:
     runs-on: ubuntu-latest
 
     defaults:
-    run:
-        working-directory: ./quirknotes/backend
+      run:
+          working-directory: ./quirknotes/backend
 
     strategy:
-    matrix:
-        node-version: [20.x]
+      matrix:
+          node-version: [20.x]
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - run: mongod --dbpath=./data/db
-    - run: npm run dev
+      - run: mongod --dbpath=./data/db
+      - run: npm run dev
 
-    - run: npm i
-    - run: npm test
+      - run: npm i
+      - run: npm test
