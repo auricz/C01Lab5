@@ -32,5 +32,5 @@ jobs:
 
       - run: npm i
 
-      - run: node server.js
+      - run: node server.js &
       - run: npm test
