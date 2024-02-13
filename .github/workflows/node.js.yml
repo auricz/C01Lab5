@@ -30,7 +30,7 @@ jobs:
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@1.10.0
 
-      - run: node server.js
-
       - run: npm i
+
+      - run: node server.js
       - run: npm test
