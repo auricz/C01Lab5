@@ -13,11 +13,11 @@ jobs:
 
     defaults:
       run:
-          working-directory: ./quirknotes/backend
+        working-directory: ./quirknotes/backend
 
     strategy:
       matrix:
-          node-version: [20.x]
+        node-version: [20.x]
 
     steps:
       - uses: actions/checkout@v4
